@@ -132,25 +132,72 @@ Tells `TextInput` to automatically capitalize certain characters. This property 
 
 Specifies autocomplete hints for the system, so it can provide autofill. On Android, the system will always attempt to offer autofill by using heuristics to identify the type of content. To disable autocomplete, set `autoCompleteType` to `off`.
 
+For more information about the purpose of each value refer to [AndroidX HintConstants](https://developer.android.com/reference/androidx/autofill/HintConstants).
+
 Possible values for `autoCompleteType` are:
 
 - `off`
+- `emailAddress`
 - `username`
 - `password`
-- `email`
-- `name`
-- `tel`
-- `street-address`
-- `postal-code`
-- `cc-number`
-- `cc-csc`
-- `cc-exp`
-- `cc-exp-month`
-- `cc-exp-year`
+- `creditCardNumber`
+- `creditCardSecurityCode`
+- `creditCardExpirationDate`
+- `creditCardExpirationMonth`
+- `creditCardExpirationYear`
+- `creditCardExpirationDay`
+- `postalAddress`
+- `postalCode`
+- `addressCountry`
+- `addressRegion`
+- `addressLocality`
+- `streetAddress`
+- `extendedAddress`
+- `extendedPostalCode`
+- `personName`
+- `personGivenName`
+- `personFamilyName`
+- `personMiddleName`
+- `personMiddleInitial`
+- `personNamePrefix`
+- `personNameSuffix`
+- `phoneNumber`
+- `phoneNumberDevice`
+- `phoneCountryCode`
+- `phoneNational`
+- `newUsername`
+- `newPassword`
+- `gender`
+- `birthDateFull`
+- `birthDateDay`
+- `birthDateMonth`
+- `birthDateYear`
+- `smsOTPCode`
+- `smsOTPCode1`
+- `smsOTPCode2`
+- `smsOTPCode3`
+- `smsOTPCode4`
+- `smsOTPCode5`
+- `smsOTPCode6`
+- `smsOTPCode7`
+- `smsOTPCode8`
 
-| Type                                                                                                                                                         | Required | Platform |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- | -------- |
-| enum('off', 'username', 'password', 'email', 'name', 'tel', 'street-address', 'postal-code', 'cc-number', 'cc-csc', 'cc-exp', 'cc-exp-month', 'cc-exp-year') | No       | Android  |
+Deprecated values:
+
+- `email` (use `emailAddress` instead)
+- `name` (use `personName` instead)
+- `tel` (use `phoneNumber` instead)
+- `street-address` (use `postalAddress` instead)
+- `postal-code` (use `postalCode` instead)
+- `cc-number` (use `creditCardNumber` instead)
+- `cc-csc` (use `creditCardSecurityCode` instead)
+- `cc-exp` (use `creditCardExpirationDate` instead)
+- `cc-exp-month` (use `creditCardExpirationMonth` instead)
+- `cc-exp-year` (use `creditCardExpirationYear` instead)
+
+| Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Required | Platform |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- | -------- |
+| enum('off', 'emailAddress', 'username', 'password', 'creditCardNumber', 'creditCardSecurityCode', 'creditCardExpirationDate', 'creditCardExpirationMonth', 'creditCardExpirationYear', 'creditCardExpirationDay', 'postalAddress', 'postalCode', 'addressCountry', 'addressRegion', 'addressLocality', 'streetAddress', 'extendedAddress', 'extendedPostalCode', 'personName', 'personGivenName', 'personFamilyName', 'personMiddleName', 'personMiddleInitial', 'personNamePrefix', 'personNameSuffix', 'phoneNumber', 'phoneNumberDevice', 'phoneCountryCode', 'phoneNational', 'newUsername', 'newPassword', 'gender', 'birthDateFull', 'birthDateDay', 'birthDateMonth', 'birthDateYear', 'smsOTPCode', 'smsOTPCode1', 'smsOTPCode2', 'smsOTPCode3', 'smsOTPCode4', 'smsOTPCode5', 'smsOTPCode6', 'smsOTPCode7', 'smsOTPCode8', 'email', 'name', 'tel', 'street-address', 'postal-code', 'cc-number', 'cc-csc', 'cc-exp', 'cc-exp-month', 'cc-exp-year') | No       | Android  |
 
 ---
 
